@@ -2,7 +2,7 @@ const tabuleiro = document.getElementById("game-board")
 const visorTempo = document.getElementById("timer")
 const visorPontos = document.getElementById("score")
 
-let icones = ["🐶", "🐱", "🐭", "🦊", "🐸", "🐼", "🐵", "🐷"];
+let icones = ["✨", "🌼", "🍇", "🌷", "🍄", "🍉", "💜", "🌺"];
 let cartas = []
 let primeiraCarta = null;
 let segundaCarta = null;
@@ -13,11 +13,16 @@ let totalDePares = icones.length;
 let tempoRestante = 60;
 let intervaloDoTempo = null;
 
+
+
 function iniciarJogo() {
     cartas = duplicarIcones(icones)
     embaralharCartas(cartas);
     criarCartasNoTabuleiro(cartas);
     iniciarContadorRegressivo();
+
+    const somFundo = document.getElementById("som-fundo");
+    somFundo.play ()
 }
 
 function duplicarIcones(lista) {
