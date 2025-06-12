@@ -1,6 +1,6 @@
 body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: rgb(251, 212, 225);
+    background-color: #fadde6;
     text-align: center;
 }
 h1 {
@@ -14,14 +14,28 @@ h1 {
 }
 .game-board {
     width: 300px;
-    height: 100px;
     border: 3px solid rgb(255, 255, 255);
     border-radius: 7px;
     display: grid;
     grid-template-columns: repeat(4, 70px);
     gap: 10px;
     margin: 20px auto;
+    padding: 20px;
+}
 
+.card {
+    width: 70px;
+    height: 70px;
+    background-color: rgb(255, 150, 171);
+    border-radius: 8px;
+    font-size: 60px;
+    color: white;
+    cursor: pointer;
+}
+
+.card-revealed {
+    background-color: rgb(249, 238, 241);
+    
 }
 
 
